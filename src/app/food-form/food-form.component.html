@@ -1,0 +1,42 @@
+<div class="container w-50">
+  <h1>SET YOUR DATA</h1>
+  <form  (ngSubmit)='submitInfo()' #infoForm='ngForm'>
+      <div class="form-group">
+        <label for="title">NAME OF FOOD</label>
+        <input type="text"
+        class="form-control"
+        id="title"
+        placeholder="Enter Food Name"
+        [(ngModel)]="newInfo.name"
+        name="title"
+         #title="ngModel" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Calories</label>
+        <input type="text"
+        class="form-control"
+        id="title"
+        placeholder="Enter Food Name"
+        [(ngModel)]="newInfo.calories"
+        name="title"
+         #title="ngModel" required>
+      </div>
+      <div class="form-group">
+        <label
+        for="entry">Entry
+        </label>
+        <textarea
+        class="form-control"
+        type="text"
+        id="entry"
+        rows="5"
+        required placeholder="More about food?"
+        [(ngModel)]="newInfo.details"
+        name="details"
+        #comment="ngModel">
+      </textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
